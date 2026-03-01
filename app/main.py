@@ -3,9 +3,9 @@ from scalar_fastapi import get_scalar_api_reference
 
 app = FastAPI() 
 
-@app.post("ai-travel-agent")
+@app.post("/trip-plan")
 def create_travel_plan():
-    return {"message": "Travel plan is processing..."}
+    return {"message": "Trip plan is processing..."}
 
 @app.get("/scalar")
 def get_scalar():
