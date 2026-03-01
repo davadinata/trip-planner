@@ -16,7 +16,7 @@ class RankSchema(BaseModel):
 
 
 class Selected(BaseModel):
-    selected: list[str] = Field(description="Top attractions that fit budget and time")
+    selected: list[str] = Field(description="Top selected destinations that fit budget and time")
 
 
 class ItinerarySchema(BaseModel):
