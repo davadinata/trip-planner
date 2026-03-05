@@ -5,10 +5,16 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "celery>=5.6.2",
     "fastapi>=0.135.0",
+    "markdown>=3.10.2",
     "openai>=2.24.0",
     "pydantic>=2.12.5",
+    "pydantic-settings>=2.13.1",
     "python-dotenv>=1.2.1",
     "redis>=7.2.1",
-    "tavily>=1.1.0",
+    "scalar-fastapi>=1.7.0",
+    "tavily-python>=0.7.22",
+    "uvicorn>=0.41.0",
+    "weasyprint>=68.1",
 ]
