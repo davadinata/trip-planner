@@ -3,7 +3,7 @@ import logging
 
 from app.utils.openai import oa_client
 from app.utils.tavily import tavily_client
-from .prompt import TRIP_REPORT_SYSTEM_PROMPT
+from .prompt import TRIP_REPORT_SYSTEM_PROMPT, ITINERARY_SYSTEM_PROMPT
 from .schema import (
     TripInput,
     AttractionsSchema,
@@ -110,11 +110,7 @@ def generate_itinerary(trip: TripInput, selected: SelectedAttractionsSchema) -> 
         messages=[
             {
                 "role": "system",
-                "content": (
-                    "Create a day-by-day itinerary by clustering attractions by location. "
-                    "Each day should have morning, afternoon, and evening activities. "
-                    "Keep it realistic and enjoyable."
-                ),
+                "content": ITINERARY_SYSTEM_PROMPT,
             },
             {
                 "role": "user",
